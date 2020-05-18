@@ -1,0 +1,52 @@
+model:
+    arch: frrnB
+data:
+    dataset: cityscapes
+    train_split: train
+    val_split: val
+    img_rows: 512
+    img_cols: 1024
+    # path: /vol/teaching/drivability/PycharmProjects/pytorch-semseg/cityscapes
+    path: /vol/vssp/AP_datasets/still/Cityscapes/
+    # path: /vol/teaching/drivability/citySAND
+training:
+    train_iters: 85000
+    batch_size: 2
+    val_interval: 500
+    print_interval: 25
+    optimizer:
+        lr: 1.0e-4
+        name: adam
+    lr_schedule:
+        name: poly_lr
+        max_iter: 85000
+    momentum: 0.99
+    weight_decay: 0.0005
+    resume: # runs/frrnB_cityscapes/xxxx/frrnB_cityscapes_best_model.pkl
+    visdom: False
+    n_workers: 2
+    loss:
+        name: cross_entropy
+#
+#model:
+#    arch: frrnB
+#data:
+#    dataset: cityscapes
+#    train_split: train
+#    val_split: val
+#    img_rows: 512
+#    img_cols: 1024
+#    path: /private/home/meetshah/misc_code/ps/data/VOCdevkit/VOC2012/
+#training:
+#    train_iters: 85000
+#    batch_size: 2
+#    val_interval: 500
+#    print_interval: 25
+#    optimizer:
+#        lr: 1.0e-4
+#    l_rate: 1.0e-4
+#    l_schedule:
+#    momentum: 0.99
+#    weight_decay: 0.0005
+#    resume: frrnB_cityscapes_best_model.pkl
+#    visdom: False
