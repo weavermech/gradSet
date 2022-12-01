@@ -53,8 +53,7 @@ python test.py [-h] [--model_path [MODEL_PATH]] [--dataset [DATASET]]
 
 ## Authors
 
-Stephen Hanson
-stephenhansonj@gmail.com
+Stephen H
 
 
 ## Acknowledgments
